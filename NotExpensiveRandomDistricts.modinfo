@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="F1E1D911-ACCA-B1BA-BABA-D05323DAE07B" version="1.01">
+  <Properties>
+    <Name>Expensive non-random Districts and Units</Name>
+    <Description>To be used with: https://steamcommunity.com/sharedfiles/filedetails/?id=3119084741
+
+Change costs of districts and units to be 100x more expensive. But keeps cost of Random Districts/units to be cheaper.
+Note, that repairing districts, upgrading units, and recalling heroes is also scaled. Building costs inside districts is unaffected.
+
+Should work with most mods and DLCs.
+
+Base cost 50 for random unit and 100 for random district.</Description>
+    <Created>1689249507</Created>
+    <Teaser>Feeling lucky?</Teaser>
+    <Authors>Konstantin Petrukhnov</Authors>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+    <LoadOrder>99999</LoadOrder>
+  </Properties>
+  
+  <FrontEndActions />
+  
+  <Dependencies>
+    <Mod id="1f2bb791-4009-42fe-9f38-a3d792fa63fd" title="Random District and Unit" version="1"/>
+  </Dependencies>
+  
+  <Components>
+		<UpdateDatabase id="CostAdjustments">
+      <Properties>
+        <LoadOrder>99999</LoadOrder>
+      </Properties>
+			<Items>
+				<File>Core/CostAdjustments.sql</File>
+			</Items>
+		</UpdateDatabase>
+	</Components>
+  
+  <Files>
+		<File>Core/CostAdjustments.sql</File>
+	</Files>
+</Mod>
